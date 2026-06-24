@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" fill="none" role="img" aria-label="Salvo burst">
+  <circle cx="22" cy="200" r="15" fill="#0a1a2b"></circle>
+  <path d="M 68.00 200.00 A 46 46 0 0 0 22.00 154.00" fill="none" stroke="#ff4a1c" stroke-width="11" stroke-linecap="round"></path>
+  <path d="M 92.00 200.00 A 70 70 0 0 0 22.00 130.00" fill="none" stroke="#ff4a1c" stroke-width="11" stroke-linecap="round"></path>
+  <path d="M 116.00 200.00 A 94 94 0 0 0 22.00 106.00" fill="none" stroke="#ff4a1c" stroke-width="11" stroke-linecap="round"></path>
+  <path d="M 140.00 200.00 A 118 118 0 0 0 22.00 82.00" fill="none" stroke="#ff4a1c" stroke-width="11" stroke-linecap="round"></path>
+  <path d="M 164.00 200.00 A 142 142 0 0 0 22.00 58.00" fill="none" stroke="#ff4a1c" stroke-width="11" stroke-linecap="round"></path>
+  <path d="M 188.00 200.00 A 166 166 0 0 0 22.00 34.00" fill="none" stroke="#ff4a1c" stroke-width="11" stroke-linecap="round"></path>
+  <line x1="191.29" y1="144.99" x2="212.21" y2="138.20" stroke="#ff4a1c" stroke-width="11" stroke-linecap="round"></line>
+  <line x1="147.87" y1="74.13" x2="163.42" y2="58.58" stroke="#ff4a1c" stroke-width="11" stroke-linecap="round"></line>
+  <line x1="77.01" y1="30.71" x2="83.80" y2="9.79" stroke="#ff4a1c" stroke-width="11" stroke-linecap="round"></line>
+</svg>
