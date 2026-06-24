@@ -1,0 +1,50 @@
+/* ============================================================
+   SALVO INNOVATION — TYPOGRAPHY TOKENS
+   Display: Space Grotesk · Body: Hanken Grotesk · Mono: Space Mono
+   Fonts are loaded in fonts.css (Google Fonts).
+   ============================================================ */
+
+:root {
+  /* ---- Families ---- */
+  --font-display: "Space Grotesk", "Hanken Grotesk", system-ui, sans-serif;
+  --font-body: "Hanken Grotesk", system-ui, -apple-system, sans-serif;
+  --font-mono: "Space Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  /* ---- Weights ---- */
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  /* ---- Type scale (fluid where it earns it) ---- */
+  --text-display-2xl: clamp(3.5rem, calc(1.5rem + 7vw), 7rem);    /* hero monster */
+  --text-display-xl: clamp(2.75rem, calc(1.4rem + 4.6vw), 4.5rem);
+  --text-display-lg: clamp(2.25rem, calc(1.4rem + 2.8vw), 3.25rem);
+  --text-h1: 2.25rem;    /* 36 */
+  --text-h2: 1.75rem;    /* 28 */
+  --text-h3: 1.375rem;   /* 22 */
+  --text-h4: 1.125rem;   /* 18 */
+  --text-body-lg: 1.1875rem; /* 19 */
+  --text-body: 1.0625rem;    /* 17 */
+  --text-body-sm: 0.9375rem; /* 15 */
+  --text-caption: 0.8125rem; /* 13 */
+  --text-eyebrow: 0.75rem;   /* 12 */
+
+  /* ---- Line heights ---- */
+  --leading-tight: 0.98;
+  --leading-snug: 1.12;
+  --leading-heading: 1.05;
+  --leading-normal: 1.55;
+  --leading-relaxed: 1.7;
+
+  /* ---- Letter spacing ---- */
+  --tracking-tighter: -0.03em;
+  --tracking-tight: -0.015em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.04em;
+  --tracking-eyebrow: 0.16em;  /* uppercase mono labels */
+
+  /* ---- Semantic roles ---- */
+  --font-heading: var(--font-display);
+  --font-eyebrow: var(--font-mono);
+}

@@ -1,0 +1,20 @@
+<!-- @dsCard group="Brand" viewport="700x200" name="Motifs" subtitle="Burst rays · sonar ripple · waves · chart dots. Large & low-contrast." -->
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8" />
+<link rel="stylesheet" href="../styles.css" />
+<style>
+  body { margin:0; padding:22px 24px; background:var(--paper); font-family:var(--font-mono); }
+  .row { display:flex; gap:18px; }
+  .tile { flex:1; height:128px; border-radius:var(--radius-md); border:2px solid var(--ink-900); overflow:hidden; position:relative; display:flex; align-items:flex-end; }
+  .cap { position:relative; z-index:2; font-size:10px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; padding:8px; color:var(--ink-900); }
+  .dark { background:var(--ink-900); } .dark .cap { color:var(--paper); }
+  .m { position:absolute; }
+</style></head>
+<body>
+<div class="row">
+  <div class="tile"><img class="m" src="../assets/motif-burst-rays.svg" style="right:-20px; top:-20px; width:150px" alt="" /><span class="cap">Burst rays</span></div>
+  <div class="tile dark"><img class="m" src="../assets/motif-ripple.svg" style="right:-30px; bottom:-30px; width:170px; filter:invert(1)" alt="" /><span class="cap">Sonar ripple</span></div>
+  <div class="tile" style="background:var(--signal-500)"><img class="m" src="../assets/motif-waves.svg" style="left:0; bottom:24px; width:100%; filter:brightness(0)" alt="" /><span class="cap" style="color:#fff">Waves</span></div>
+  <div class="tile" style="background-image:url(../assets/pattern-dots.svg); background-size:18px"><span class="cap">Chart dots</span></div>
+</div>
+</body></html>

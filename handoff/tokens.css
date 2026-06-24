@@ -1,0 +1,223 @@
+/* Salvo Innovation — design tokens (paste into Lovable / src/index.css) */
+
+/* ===== fonts.css ===== */
+/* ============================================================
+   SALVO INNOVATION — WEBFONTS
+   Loaded from Google Fonts. NOTE: not self-hosted — see readme
+   "Font substitution" caveat. To self-host, drop binaries in
+   /fonts and replace the @import below with @font-face rules.
+   ============================================================ */
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Hanken+Grotesk:wght@400;500;600;700;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap");
+
+/* ===== tokens/colors.css ===== */
+/* ============================================================
+   SALVO INNOVATION — COLOR TOKENS
+   Ink (nautical navy) · Signal (burst-of-fire orange) ·
+   Volt (electric chartreuse) on warm Paper.
+   ============================================================ */
+
+:root {
+  /* ---- Ink: deep nautical navy (premium base / dark surfaces) ---- */
+  --ink-950: #06121e;
+  --ink-900: #0a1a2b;
+  --ink-800: #102a40;
+  --ink-700: #1c3d58;
+  --ink-600: #2e5475;
+  --ink-500: #436f93;
+
+  /* ---- Signal: the salvo, the burst of fire (PRIMARY accent) ---- */
+  --signal-700: #b82c08;
+  --signal-600: #e23a0e;
+  --signal-500: #ff4a1c;   /* primary */
+  --signal-400: #ff6a3d;
+  --signal-300: #ff9166;
+  --signal-200: #ffc3aa;
+  --signal-100: #ffe2d6;
+
+  /* ---- Volt: electric chartreuse (secondary pop / signal) ---- */
+  --volt-700: #8aab10;
+  --volt-600: #aed11d;
+  --volt-500: #d4ff47;   /* secondary */
+  --volt-400: #e1ff77;
+  --volt-200: #eeffb6;
+  --volt-100: #f3ffc8;
+
+  /* ---- Paper & warm neutrals ---- */
+  --white: #ffffff;
+  --paper: #f6f1e7;       /* primary canvas */
+  --paper-dim: #ece5d6;
+  --sand-100: #ece6da;
+  --sand-200: #ded7c7;
+  --sand-300: #c5bda9;
+  --sand-400: #9a917c;
+  --sand-500: #6f6a5b;
+
+  /* ---- Semantic status ---- */
+  --success-500: #1fa971;
+  --success-100: #d4f3e5;
+  --warning-500: #f5a524;
+  --warning-100: #fdeccc;
+  --danger-500: #d7263d;
+  --danger-100: #fbd9de;
+  --info-500: #2d6be4;
+  --info-100: #d7e3fb;
+
+  /* ============================================================
+     SEMANTIC ALIASES — reach for these in product, not raw scales
+     ============================================================ */
+
+  /* Surfaces */
+  --bg-canvas: var(--paper);
+  --bg-surface: var(--white);
+  --bg-surface-sunken: var(--paper-dim);
+  --bg-inverse: var(--ink-900);
+  --bg-accent: var(--signal-500);
+  --bg-accent-soft: var(--signal-100);
+  --bg-volt: var(--volt-500);
+
+  /* Text */
+  --text-primary: var(--ink-900);
+  --text-secondary: var(--ink-700);
+  --text-muted: var(--sand-500);
+  --text-on-dark: var(--paper);
+  --text-on-dark-muted: #9fb1c2;
+  --text-on-accent: var(--white);
+  --text-on-volt: var(--ink-900);
+  --text-link: var(--signal-600);
+
+  /* Borders & lines */
+  --border-subtle: var(--sand-200);
+  --border-default: var(--sand-300);
+  --border-strong: var(--ink-900);
+  --border-on-dark: rgba(246, 241, 231, 0.16);
+
+  /* Interactive accents */
+  --accent: var(--signal-500);
+  --accent-hover: var(--signal-600);
+  --accent-press: var(--signal-700);
+  --accent-2: var(--volt-500);
+  --focus-ring: var(--signal-500);
+}
+
+/* ===== tokens/typography.css ===== */
+/* ============================================================
+   SALVO INNOVATION — TYPOGRAPHY TOKENS
+   Display: Space Grotesk · Body: Hanken Grotesk · Mono: Space Mono
+   Fonts are loaded in fonts.css (Google Fonts).
+   ============================================================ */
+
+:root {
+  /* ---- Families ---- */
+  --font-display: "Space Grotesk", "Hanken Grotesk", system-ui, sans-serif;
+  --font-body: "Hanken Grotesk", system-ui, -apple-system, sans-serif;
+  --font-mono: "Space Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  /* ---- Weights ---- */
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  /* ---- Type scale (fluid where it earns it) ---- */
+  --text-display-2xl: clamp(3.5rem, calc(1.5rem + 7vw), 7rem);    /* hero monster */
+  --text-display-xl: clamp(2.75rem, calc(1.4rem + 4.6vw), 4.5rem);
+  --text-display-lg: clamp(2.25rem, calc(1.4rem + 2.8vw), 3.25rem);
+  --text-h1: 2.25rem;    /* 36 */
+  --text-h2: 1.75rem;    /* 28 */
+  --text-h3: 1.375rem;   /* 22 */
+  --text-h4: 1.125rem;   /* 18 */
+  --text-body-lg: 1.1875rem; /* 19 */
+  --text-body: 1.0625rem;    /* 17 */
+  --text-body-sm: 0.9375rem; /* 15 */
+  --text-caption: 0.8125rem; /* 13 */
+  --text-eyebrow: 0.75rem;   /* 12 */
+
+  /* ---- Line heights ---- */
+  --leading-tight: 0.98;
+  --leading-snug: 1.12;
+  --leading-heading: 1.05;
+  --leading-normal: 1.55;
+  --leading-relaxed: 1.7;
+
+  /* ---- Letter spacing ---- */
+  --tracking-tighter: -0.03em;
+  --tracking-tight: -0.015em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.04em;
+  --tracking-eyebrow: 0.16em;  /* uppercase mono labels */
+
+  /* ---- Semantic roles ---- */
+  --font-heading: var(--font-display);
+  --font-eyebrow: var(--font-mono);
+}
+
+/* ===== tokens/spacing.css ===== */
+/* ============================================================
+   SALVO INNOVATION — SPACING & LAYOUT TOKENS
+   4px base grid.
+   ============================================================ */
+
+:root {
+  --space-0: 0;
+  --space-1: 0.25rem;   /* 4 */
+  --space-2: 0.5rem;    /* 8 */
+  --space-3: 0.75rem;   /* 12 */
+  --space-4: 1rem;      /* 16 */
+  --space-5: 1.5rem;    /* 24 */
+  --space-6: 2rem;      /* 32 */
+  --space-7: 2.5rem;    /* 40 */
+  --space-8: 3rem;      /* 48 */
+  --space-9: 4rem;      /* 64 */
+  --space-10: 5rem;     /* 80 */
+  --space-11: 7rem;     /* 112 */
+  --space-12: 9rem;     /* 144 */
+
+  /* ---- Layout ---- */
+  --container-max: 1200px;
+  --container-wide: 1360px;
+  --container-narrow: 760px;
+  --gutter: clamp(1.25rem, 5vw, 4rem);   /* @kind spacing */
+  --section-y: clamp(4rem, 9vw, 8rem);   /* @kind spacing */
+}
+
+/* ===== tokens/effects.css ===== */
+/* ============================================================
+   SALVO INNOVATION — EFFECTS: radius, shadow, motion
+   Signature: the HARD OFFSET INK SHADOW (sticker / sticky-note
+   energy) + press-into-shadow interactions.
+   ============================================================ */
+
+:root {
+  /* ---- Radius ---- */
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 26px;
+  --radius-pill: 999px;
+
+  /* ---- Soft elevation shadows (cool ink-tinted) ---- */
+  --shadow-sm: 0 1px 2px rgba(10, 26, 43, 0.08), 0 1px 1px rgba(10, 26, 43, 0.04);
+  --shadow-md: 0 6px 16px rgba(10, 26, 43, 0.10), 0 2px 4px rgba(10, 26, 43, 0.06);
+  --shadow-lg: 0 18px 40px rgba(10, 26, 43, 0.14), 0 4px 10px rgba(10, 26, 43, 0.08);
+
+  /* ---- SIGNATURE hard offset shadows (no blur, solid ink) ---- */
+  --shadow-hard: 4px 4px 0 var(--ink-900);
+  --shadow-hard-lg: 7px 7px 0 var(--ink-900);
+  --shadow-hard-signal: 4px 4px 0 var(--signal-500);
+  --shadow-hard-volt: 4px 4px 0 var(--volt-600);
+
+  /* ---- Focus ring ---- */
+  --ring: 0 0 0 3px var(--paper), 0 0 0 6px var(--signal-500);
+  --ring-on-dark: 0 0 0 3px var(--ink-900), 0 0 0 6px var(--volt-500);
+
+  /* ---- Motion: snappy & energetic ---- */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);        /* @kind other */
+  --ease-out-back: cubic-bezier(0.34, 1.56, 0.64, 1); /* @kind other */
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);     /* @kind other */
+  --dur-fast: 120ms;   /* @kind other */
+  --dur-base: 200ms;   /* @kind other */
+  --dur-slow: 380ms;   /* @kind other */
+}
+

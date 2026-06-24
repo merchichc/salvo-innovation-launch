@@ -1,0 +1,8 @@
+/* ============================================================
+   SALVO INNOVATION — WEBFONTS
+   Loaded from Google Fonts. NOTE: not self-hosted — see readme
+   "Font substitution" caveat. To self-host, drop binaries in
+   /fonts and replace the @import below with @font-face rules.
+   ============================================================ */
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Hanken+Grotesk:wght@400;500;600;700;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap");

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 372 100" width="372" height="100" role="img" aria-label="Salvo">
+<defs></defs>
+<g transform="translate(4,6) scale(0.86)"><circle cx="19" cy="81" r="8.5" fill="#f6f1e7"></circle><path d="M 52.00 81 A 33 33 0 0 0 19 48.00" fill="none" stroke="#d4ff47" stroke-width="8" stroke-linecap="round"></path><path d="M 69.00 81 A 50 50 0 0 0 19 31.00" fill="none" stroke="#d4ff47" stroke-width="8" stroke-linecap="round"></path><path d="M 86.00 81 A 67 67 0 0 0 19 14.00" fill="none" stroke="#d4ff47" stroke-width="8" stroke-linecap="round"></path><line x1="89.38" y1="58.13" x2="102.69" y2="53.81" stroke="#d4ff47" stroke-width="8" stroke-linecap="round"></line><line x1="71.33" y1="28.67" x2="81.23" y2="18.77" stroke="#d4ff47" stroke-width="8" stroke-linecap="round"></line><line x1="41.87" y1="10.62" x2="46.19" y2="-2.69" stroke="#d4ff47" stroke-width="8" stroke-linecap="round"></line></g>
+<text class="wm" x="110" y="74" fill="#f6f1e7">SALVO</text>
+</svg>

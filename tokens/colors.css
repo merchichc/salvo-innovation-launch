@@ -1,0 +1,88 @@
+/* ============================================================
+   SALVO INNOVATION — COLOR TOKENS
+   Ink (nautical navy) · Signal (burst-of-fire orange) ·
+   Volt (electric chartreuse) on warm Paper.
+   ============================================================ */
+
+:root {
+  /* ---- Ink: deep nautical navy (premium base / dark surfaces) ---- */
+  --ink-950: #06121e;
+  --ink-900: #0a1a2b;
+  --ink-800: #102a40;
+  --ink-700: #1c3d58;
+  --ink-600: #2e5475;
+  --ink-500: #436f93;
+
+  /* ---- Signal: the salvo, the burst of fire (PRIMARY accent) ---- */
+  --signal-700: #b82c08;
+  --signal-600: #e23a0e;
+  --signal-500: #ff4a1c;   /* primary */
+  --signal-400: #ff6a3d;
+  --signal-300: #ff9166;
+  --signal-200: #ffc3aa;
+  --signal-100: #ffe2d6;
+
+  /* ---- Volt: electric chartreuse (secondary pop / signal) ---- */
+  --volt-700: #8aab10;
+  --volt-600: #aed11d;
+  --volt-500: #d4ff47;   /* secondary */
+  --volt-400: #e1ff77;
+  --volt-200: #eeffb6;
+  --volt-100: #f3ffc8;
+
+  /* ---- Paper & warm neutrals ---- */
+  --white: #ffffff;
+  --paper: #f6f1e7;       /* primary canvas */
+  --paper-dim: #ece5d6;
+  --sand-100: #ece6da;
+  --sand-200: #ded7c7;
+  --sand-300: #c5bda9;
+  --sand-400: #9a917c;
+  --sand-500: #6f6a5b;
+
+  /* ---- Semantic status ---- */
+  --success-500: #1fa971;
+  --success-100: #d4f3e5;
+  --warning-500: #f5a524;
+  --warning-100: #fdeccc;
+  --danger-500: #d7263d;
+  --danger-100: #fbd9de;
+  --info-500: #2d6be4;
+  --info-100: #d7e3fb;
+
+  /* ============================================================
+     SEMANTIC ALIASES — reach for these in product, not raw scales
+     ============================================================ */
+
+  /* Surfaces */
+  --bg-canvas: var(--paper);
+  --bg-surface: var(--white);
+  --bg-surface-sunken: var(--paper-dim);
+  --bg-inverse: var(--ink-900);
+  --bg-accent: var(--signal-500);
+  --bg-accent-soft: var(--signal-100);
+  --bg-volt: var(--volt-500);
+
+  /* Text */
+  --text-primary: var(--ink-900);
+  --text-secondary: var(--ink-700);
+  --text-muted: var(--sand-500);
+  --text-on-dark: var(--paper);
+  --text-on-dark-muted: #9fb1c2;
+  --text-on-accent: var(--white);
+  --text-on-volt: var(--ink-900);
+  --text-link: var(--signal-600);
+
+  /* Borders & lines */
+  --border-subtle: var(--sand-200);
+  --border-default: var(--sand-300);
+  --border-strong: var(--ink-900);
+  --border-on-dark: rgba(246, 241, 231, 0.16);
+
+  /* Interactive accents */
+  --accent: var(--signal-500);
+  --accent-hover: var(--signal-600);
+  --accent-press: var(--signal-700);
+  --accent-2: var(--volt-500);
+  --focus-ring: var(--signal-500);
+}

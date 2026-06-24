@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Salvo Pricing Page" description="Pricing page template — hero, three sticker-card tiers, pricing FAQ, CTA and footer, built on Salvo components." -->
+<helmet>
+<script src="./ds-base.js"></script>
+</helmet>
+
+<div style="font-family:var(--font-body);color:var(--text-primary);background:var(--paper)">
+
+  <!-- ===== NAV ===== -->
+  <header style="position:sticky;top:0;z-index:50;background:rgba(246,241,231,0.82);backdrop-filter:blur(12px);border-bottom:2px solid var(--ink-900)">
+    <div style="width:100%;max-width:1180px;margin:0 auto;padding:0 clamp(20px,5vw,56px);display:flex;align-items:center;justify-content:space-between;height:72px">
+      <x-import component-from-global-scope="SalvoInnovationDesignSystem_cdc9ce.SalvoLogo" tone="ink" size="30" hint-size="150px,34px"></x-import>
+      <nav style="display:flex;align-items:center;gap:4px">
+        <a href="#tiers" style="font-family:var(--font-body);font-weight:700;font-size:15px;color:var(--ink-900);padding:8px 12px;text-decoration:none">Plans</a>
+        <a href="#faq" style="font-family:var(--font-body);font-weight:700;font-size:15px;color:var(--ink-900);padding:8px 12px;text-decoration:none">FAQ</a>
+      </nav>
+      <x-import component-from-global-scope="SalvoInnovationDesignSystem_cdc9ce.Button" variant="primary" size="sm" hint-size="130px,40px">Book a salvo</x-import>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section style="background:var(--paper);border-bottom:2px solid var(--ink-900)">
+    <div style="width:100%;max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,96px) clamp(20px,5vw,56px);text-align:center">
+      <span style="display:inline-flex;align-items:center;gap:10px;font-family:var(--font-mono);font-size:12px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--signal-600)"><span style="width:26px;height:0;border-top:2px solid currentColor"></span>Pricing</span>
+      <h1 style="font-family:var(--font-display);font-weight:700;font-size:clamp(2.6rem,6vw,4.4rem);line-height:0.99;letter-spacing:-0.035em;margin:18px 0 0">Clear prices. No surprises.</h1>
+      <p style="margin:20px auto 0;font-size:20px;color:var(--text-secondary);max-width:46ch">Pick the burst that fits. Every option ends with a decision you can build on.</p>
+    </div>
+  </section>
+
+  <!-- ===== TIERS ===== -->
+  <section id="tiers" style="padding:clamp(48px,7vw,88px) 0">
+    <div style="width:100%;max-width:1180px;margin:0 auto;padding:0 clamp(20px,5vw,56px)">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;align-items:stretch">
+
+        <!-- Spark -->
+        <div style="background:var(--white);border:2px solid var(--ink-900);border-radius:18px;box-shadow:4px 4px 0 var(--ink-900);padding:32px;display:flex;flex-direction:column">
+          <div style="font-family:var(--font-mono);font-size:11px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--signal-600)">Single workshop</div>
+          <h3 style="font-family:var(--font-display);font-weight:700;font-size:30px;margin:10px 0 4px;letter-spacing:-0.02em;color:var(--ink-900)">Spark</h3>
+          <div style="display:flex;align-items:baseline;gap:6px;margin:8px 0 4px">
+            <span style="font-family:var(--font-display);font-weight:700;font-size:44px;letter-spacing:-0.03em;color:var(--signal-500)">$5k</span>
+            <span style="font-family:var(--font-mono);font-size:13px;color:var(--text-muted)">/ session</span>
+          </div>
+          <p style="font-size:15.5px;line-height:1.5;color:var(--text-secondary);margin:6px 0 22px">One sharp, facilitated session to break a specific logjam.</p>
+          <div style="display:flex;flex-direction:column;gap:12px;flex:1">
+            <span style="font-size:15px;color:var(--ink-900)">Half- or full-day workshop</span>
+            <span style="font-size:15px;color:var(--ink-900)">Agenda designed around your decision</span>
+            <span style="font-size:15px;color:var(--ink-900)">Facilitation + digital whiteboard</span>
+            <span style="font-size:15px;color:var(--ink-900)">Outcomes summary next day</span>
+          </div>
+          <div style="margin-top:26px">
+            <x-import component-from-global-scope="SalvoInnovationDesignSystem_cdc9ce.Button" variant="primary" size="md" full-width="true" hint-size="100%,48px">Book a Spark</x-import>
+          </div>
+        </div>
+
+        <!-- Salvo (highlight) -->
+        <div style="position:relative;background:var(--ink-900);border:2px solid var(--ink-900);border-radius:18px;box-shadow:6px 6px 0 var(--signal-500);padding:32px;display:flex;flex-direction:column">
+          <span style="position:absolute;top:-14px;right:22px"><x-import component-from-global-scope="SalvoInnovationDesignSystem_cdc9ce.Badge" tone="signal" hint-size="120px,26px">Most popular</x-import></span>
+          <div style="font-family:var(--font-mono);font-size:11px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--volt-500)">Most popular</div>
+          <h3 style="font-family:var(--font-display);font-weight:700;font-size:30px;margin:10px 0 4px;letter-spacing:-0.02em;color:var(--paper)">Salvo</h3>
+          <div style="display:flex;align-items:baseline;gap:6px;margin:8px 0 4px">
+            <span style="font-family:var(--font-display);font-weight:700;font-size:44px;letter-spacing:-0.03em;color:var(--volt-500)">$15k</span>
+            <span style="font-family:var(--font-mono);font-size:13px;color:var(--text-on-dark-muted)">/ sprint</span>
+          </div>
+          <p style="font-size:15.5px;line-height:1.5;color:var(--text-on-dark-muted);margin:6px 0 22px">The full product sprint — from fuzzy problem to a custom, tested prototype.</p>
+          <div style="display:flex;flex-direction:column;gap:12px;flex:1">
+            <span style="font-size:15px;color:var(--paper)">Full product sprint</span>
+            <span style="font-size:15px;color:var(--paper)">Pre-sprint scoping &amp; recruiting</span>
+            <span style="font-size:15px;color:var(--paper)">A custom prototype + 5 user tests</span>
+            <span style="font-size:15px;color:var(--paper)">Decision, artefacts &amp; next steps</span>
+            <span style="font-size:15px;color:var(--paper)">2-week follow-up check-in</span>
+          </div>
+          <div style="margin-top:26px">
+            <x-import component-from-global-scope="SalvoInnovationDesignSystem_cdc9ce.Button" variant="volt" size="md" full-width="true" hint-size="100%,48px">Book a Salvo</x-import>
+          </div>
+        </div>
+
+        <!-- Fleet -->
+        <div style="background:var(--white);border:2px solid var(--ink-900);border-radius:18px;box-shadow:4px 4px 0 var(--ink-900);padding:32px;display:flex;flex-direction:column">
+          <div style="font-family:var(--font-mono);font-size:11px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--signal-600)">Ongoing</div>
+          <h3 style="font-family:var(--font-display);font-weight:700;font-size:30px;margin:10px 0 4px;letter-spacing:-0.02em;color:var(--ink-900)">Fleet</h3>
+          <div style="display:flex;align-items:baseline;gap:6px;margin:8px 0 4px">
+            <span style="font-family:var(--font-display);font-weight:700;font-size:44px;letter-spacing:-0.03em;color:var(--signal-500)">Custom</span>
+          </div>
+          <p style="font-size:15.5px;line-height:1.5;color:var(--text-secondary);margin:6px 0 22px">Embedded consulting and a cadence of workshops over months.</p>
+          <div style="display:flex;flex-direction:column;gap:12px;flex:1">
+            <span style="font-size:15px;color:var(--ink-900)">Fractional product leadership</span>
+            <span style="font-size:15px;color:var(--ink-900)">Recurring strategy &amp; sprint cadence</span>
+            <span style="font-size:15px;color:var(--ink-900)">Team facilitation coaching</span>
+            <span style="font-size:15px;color:var(--ink-900)">Quarterly roadmap resets</span>
+          </div>
+          <div style="margin-top:26px">
+            <x-import component-from-global-scope="SalvoInnovationDesignSystem_cdc9ce.Button" variant="secondary" size="md" full-width="true" hint-size="100%,48px">Talk to us</x-import>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section id="faq" style="padding:clamp(48px,7vw,88px) 0;background:var(--white);border-top:2px solid var(--ink-900)">
+    <div style="width:100%;max-width:760px;margin:0 auto;padding:0 clamp(20px,5vw,56px)">
+      <div style="text-align:center">
+        <span style="display:inline-flex;align-items:center;gap:10px;font-family:var(--font-mono);font-size:12px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--signal-600)"><span style="width:26px;height:0;border-top:2px solid currentColor"></span>Pricing FAQ</span>
+        <h2 style="font-family:var(--font-display);font-weight:700;font-size:clamp(2rem,4vw,3rem);line-height:1.04;letter-spacing:-0.03em;color:var(--ink-900);margin:16px 0 0">Before you ask</h2>
+      </div>
+      <div style="margin-top:30px">
+        <x-import component-from-global-scope="SalvoInnovationDesignSystem_cdc9ce.Accordion" items="{{ faqItems }}" default-open="{{ faqOpen }}" hint-size="100%,300px"></x-import>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA BAND ===== -->
+  <section style="background:var(--signal-500);border-top:2px solid var(--ink-900);border-bottom:2px solid var(--ink-900)">
+    <div style="width:100%;max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,96px) clamp(20px,5vw,56px);display:flex;flex-wrap:wrap;gap:28px;align-items:center;justify-content:space-between">
+      <div style="max-width:640px">
+        <h2 style="font-family:var(--font-display);font-weight:700;font-size:clamp(2.2rem,4.5vw,3.4rem);line-height:1.02;letter-spacing:-0.03em;color:#fff;margin:0">Not sure which fits?</h2>
+        <p style="margin-top:14px;font-size:19px;color:rgba(255,255,255,0.9);max-width:48ch">Tell us what's stuck and we'll point you at the right burst — no hard sell.</p>
+      </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <x-import component-from-global-scope="SalvoInnovationDesignSystem_cdc9ce.Button" variant="ink" size="lg" hint-size="180px,56px">Book a salvo</x-import>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer style="background:var(--ink-900);color:var(--paper);position:relative;overflow:hidden">
+    <img src="../../assets/motif-ripple.svg" alt="" style="position:absolute;left:-80px;bottom:-80px;width:300px;opacity:0.12;filter:invert(1)" />
+    <div style="position:relative;width:100%;max-width:1180px;margin:0 auto;padding:clamp(48px,7vw,80px) clamp(20px,5vw,56px) 32px">
+      <div style="display:flex;flex-wrap:wrap;gap:40px;justify-content:space-between">
+        <div style="max-width:320px">
+          <x-import component-from-global-scope="SalvoInnovationDesignSystem_cdc9ce.SalvoLogo" tone="paper" size="32" hint-size="150px,36px"></x-import>
+          <p style="margin-top:18px;color:var(--text-on-dark-muted);font-size:15.5px;line-height:1.6">Product consulting and workshop facilitation. We bring the fire — you bring the product worth saving.</p>
+        </div>
+        <div style="display:flex;gap:56px;flex-wrap:wrap">
+          <div>
+            <div style="font-family:var(--font-mono);font-size:11px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--volt-500);margin-bottom:14px">Plans</div>
+            <div style="display:flex;flex-direction:column;gap:10px">
+              <a href="#tiers" style="color:var(--paper);font-size:15px;text-decoration:none">Spark</a>
+              <a href="#tiers" style="color:var(--paper);font-size:15px;text-decoration:none">Salvo</a>
+              <a href="#tiers" style="color:var(--paper);font-size:15px;text-decoration:none">Fleet</a>
+            </div>
+          </div>
+          <div>
+            <div style="font-family:var(--font-mono);font-size:11px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--volt-500);margin-bottom:14px">Get in touch</div>
+            <div style="display:flex;flex-direction:column;gap:10px">
+              <a href="#" style="color:var(--paper);font-size:15px;text-decoration:none">hello@salvo.studio</a>
+              <a href="#" style="color:var(--paper);font-size:15px;text-decoration:none">Book a salvo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:48px;padding-top:22px;border-top:1px solid var(--border-on-dark);display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;font-family:var(--font-mono);font-size:12px;letter-spacing:0.04em;color:var(--text-on-dark-muted)">
+        <span>© 2026 Salvo Innovation</span>
+        <span>SALVŌ — “I SAVE” · 51.5074° N, 0.1278° W</span>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;$preview&quot;: { &quot;width&quot;: 1180, &quot;height&quot;: 1500 }
+}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      faqItems: [
+        { id: "p1", title: "What's not included?", content: "Travel and venue for in-person sessions are billed at cost. Everything else — design, facilitation, tools, write-ups — is in the price." },
+        { id: "p2", title: "Can we mix consulting and workshops?", content: "That's exactly what Fleet is for. We'll shape a cadence that fits how your team actually works." },
+        { id: "p3", title: "Do you offer a guarantee?", content: "If you finish a Salvo sprint and don't have a clear decision and a tested prototype, we'll make it right. That's never happened, but the promise stands." },
+      ],
+      faqOpen: ["p1"],
+    };
+  }
+}
+</script>
+</body>
+</html>

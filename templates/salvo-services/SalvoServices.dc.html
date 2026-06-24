@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Salvo Services Page" description="Services page template — hero, two alternating service lines, FAQ accordion, CTA and footer, built on Salvo components." -->
+<helmet>
+<script src="./ds-base.js"></script>
+</helmet>
+
+<div style="font-family:var(--font-body);color:var(--text-primary);background:var(--paper)">
+
+  <!-- ===== NAV ===== -->
+  <header style="position:sticky;top:0;z-index:50;background:rgba(246,241,231,0.82);backdrop-filter:blur(12px);border-bottom:2px solid var(--ink-900)">
+    <div style="width:100%;max-width:1180px;margin:0 auto;padding:0 clamp(20px,5vw,56px);display:flex;align-items:center;justify-content:space-between;height:72px">
+      <x-import component-from-global-scope="SalvoInnovationDesignSystem_cdc9ce.SalvoLogo" tone="ink" size="30" hint-size="150px,34px"></x-import>
+      <nav style="display:flex;align-items:center;gap:4px">
+        <a href="#consulting" style="font-family:var(--font-body);font-weight:700;font-size:15px;color:var(--ink-900);padding:8px 12px;text-decoration:none">Consulting</a>
+        <a href="#facilitation" style="font-family:var(--font-body);font-weight:700;font-size:15px;color:var(--ink-900);padding:8px 12px;text-decoration:none">Facilitation</a>
+        <a href="#faq" style="font-family:var(--font-body);font-weight:700;font-size:15px;color:var(--ink-900);padding:8px 12px;text-decoration:none">FAQ</a>
+      </nav>
+      <x-import component-from-global-scope="SalvoInnovationDesignSystem_cdc9ce.Button" variant="primary" size="sm" hint-size="130px,40px">Book a salvo</x-import>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section style="position:relative;overflow:hidden;background:var(--paper);border-bottom:2px solid var(--ink-900)">
+    <img src="../../assets/brand-stickies.svg" alt="" style="position:absolute;right:-10px;bottom:-24px;width:min(40vw,400px);opacity:0.97;pointer-events:none" />
+    <div style="position:relative;width:100%;max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,104px) clamp(20px,5vw,56px)">
+      <div style="max-width:780px">
+        <span style="display:inline-flex;align-items:center;gap:10px;font-family:var(--font-mono);font-size:12px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--signal-600)"><span style="width:26px;height:0;border-top:2px solid currentColor"></span>Services</span>
+        <h1 style="font-family:var(--font-display);font-weight:700;font-size:clamp(2.6rem,6vw,4.6rem);line-height:0.98;letter-spacing:-0.035em;margin:18px 0 0;color:var(--ink-900)">Steady guidance, or a decisive burst.</h1>
+        <p style="margin-top:22px;font-size:20px;line-height:1.5;color:var(--text-secondary);max-width:52ch">Two service lines, one goal: get your product moving and keep it moving.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICE LINE 1 ===== -->
+  <section id="consulting" style="padding:clamp(56px,8vw,104px) 0">
+    <div style="width:100%;max-width:1180px;margin:0 auto;padding:0 clamp(20px,5vw,56px)">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:36px;align-items:center">
+        <div>
+          <div style="font-family:var(--font-mono);font-size:12px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--signal-600)">01 — Consulting</div>
+          <h2 style="font-family:var(--font-display);font-weight:700;font-size:clamp(2rem,4vw,2.8rem);letter-spacing:-0.03em;line-height:1.04;margin:12px 0 6px">Digital product consulting</h2>
+          <p style="font-size:19px;font-weight:700;color:var(--signal-600);margin:0 0 12px">For products that have lost their bearings.</p>
+          <p style="font-size:16.5px;line-height:1.6;color:var(--text-secondary);max-width:50ch">We embed with your team to find the next right thing to build. Strategy that survives contact with reality, discovery that kills bad bets early, and a roadmap your whole org can rally behind.</p>
+          <div style="margin-top:20px;display:flex;flex-wrap:wrap;gap:10px">
+            <span style="display:inline-flex;align-items:center;gap:8px;border:1.5px solid var(--ink-900);border-radius:999px;padding:7px 14px;font-size:14.5px;font-weight:600">Product &amp; portfolio strategy</span>
+            <span style="display:inline-flex;align-items:center;gap:8px;border:1.5px solid var(--ink-900);border-radius:999px;padding:7px 14px;font-size:14.5px;font-weight:600">Discovery &amp; research</span>
+            <span style="display:inline-flex;align-items:center;gap:8px;border:1.5px solid var(--ink-900);border-radius:999px;padding:7px 14px;font-size:14.5px;font-weight:600">Roadmap &amp; prioritisation</span>
+            <span style="display:inline-flex;align-items:center;gap:8px;border:1.5px solid var(--ink-900);border-radius:999px;padding:7px 14px;font-size:14.5px;font-weight:600">Fractional product leadership</span>
+          </div>
+        </div>
+        <div style="position:relative;height:300px;border-radius:18px;border:2px solid var(--ink-900);background:var(--signal-500);overflow:hidden;box-shadow:var(--shadow-hard);display:flex;align-items:flex-end">
+          <img src="../../assets/motif-burst-rays.svg" alt="" style="position:absolute;right:-30px;top:-30px;width:240px;opacity:0.85;filter:brightness(0)" />
+          <span style="position:relative;margin:16px;font-family:var(--font-mono);font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#fff">Digital product consulting</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICE LINE 2 ===== -->
+  <section id="facilitation" style="padding:0 0 clamp(56px,8vw,104px)">
+    <div style="width:100%;max-width:1180px;margin:0 auto;padding:0 clamp(20px,5vw,56px)">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:36px;align-items:center">
+        <div style="position:relative;height:300px;border-radius:18px;border:2px solid var(--ink-900);background:var(--ink-900);overflow:hidden;box-shadow:var(--shadow-hard);display:flex;align-items:flex-end">
+          <img src="../../assets/motif-ripple.svg" alt="" style="position:absolute;right:-40px;top:-40px;width:260px;opacity:0.5;filter:invert(1)" />
+          <span style="position:relative;margin:16px;font-family:var(--font-mono);font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--paper)">Workshop facilitation</span>
+        </div>
+        <div>
+          <div style="font-family:var(--font-mono);font-size:12px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--signal-600)">02 — Facilitation</div>
+          <h2 style="font-family:var(--font-display);font-weight:700;font-size:clamp(2rem,4vw,2.8rem);letter-spacing:-0.03em;line-height:1.04;margin:12px 0 6px">Workshop design &amp; facilitation</h2>
+          <p style="font-size:19px;font-weight:700;color:var(--signal-600);margin:0 0 12px">For decisions that have to happen now.</p>
+          <p style="font-size:16.5px;line-height:1.6;color:var(--text-secondary);max-width:50ch">We design and run high-energy sessions that get a room to a real decision — fast. You bring the people who can decide; we bring the structure, the momentum, and the outcomes.</p>
+          <div style="margin-top:20px;display:flex;flex-wrap:wrap;gap:10px">
+            <span style="display:inline-flex;align-items:center;gap:8px;border:1.5px solid var(--ink-900);border-radius:999px;padding:7px 14px;font-size:14.5px;font-weight:600">Product sprints + a tested prototype</span>
+            <span style="display:inline-flex;align-items:center;gap:8px;border:1.5px solid var(--ink-900);border-radius:999px;padding:7px 14px;font-size:14.5px;font-weight:600">Strategy &amp; alignment days</span>
+            <span style="display:inline-flex;align-items:center;gap:8px;border:1.5px solid var(--ink-900);border-radius:999px;padding:7px 14px;font-size:14.5px;font-weight:600">Discovery &amp; kickoff workshops</span>
+            <span style="display:inline-flex;align-items:center;gap:8px;border:1.5px solid var(--ink-900);border-radius:999px;padding:7px 14px;font-size:14.5px;font-weight:600">Operating-rhythm design</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section id="faq" style="padding:clamp(56px,8vw,96px) 0;background:var(--white);border-top:2px solid var(--ink-900)">
+    <div style="width:100%;max-width:760px;margin:0 auto;padding:0 clamp(20px,5vw,56px)">
+      <div style="text-align:center">
+        <span style="display:inline-flex;align-items:center;gap:10px;font-family:var(--font-mono);font-size:12px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--signal-600)"><span style="width:26px;height:0;border-top:2px solid currentColor"></span>Questions</span>
+        <h2 style="font-family:var(--font-display);font-weight:700;font-size:clamp(2rem,4vw,3rem);line-height:1.04;letter-spacing:-0.03em;color:var(--ink-900);margin:16px 0 0">The usual questions</h2>
+      </div>
+      <div style="margin-top:32px">
+        <x-import component-from-global-scope="SalvoInnovationDesignSystem_cdc9ce.Accordion" items="{{ faqItems }}" default-open="{{ faqOpen }}" hint-size="100%,360px"></x-import>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA BAND ===== -->
+  <section style="background:var(--signal-500);border-top:2px solid var(--ink-900);border-bottom:2px solid var(--ink-900)">
+    <div style="width:100%;max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,96px) clamp(20px,5vw,56px);display:flex;flex-wrap:wrap;gap:28px;align-items:center;justify-content:space-between">
+      <div style="max-width:640px">
+        <h2 style="font-family:var(--font-display);font-weight:700;font-size:clamp(2.2rem,4.5vw,3.4rem);line-height:1.02;letter-spacing:-0.03em;color:#fff;margin:0">Ready to get unstuck?</h2>
+        <p style="margin-top:14px;font-size:19px;color:rgba(255,255,255,0.9);max-width:48ch">Tell us what's stuck. We'll tell you the fastest way through — usually in a week.</p>
+      </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <x-import component-from-global-scope="SalvoInnovationDesignSystem_cdc9ce.Button" variant="ink" size="lg" hint-size="180px,56px">Book a salvo</x-import>
+        <x-import component-from-global-scope="SalvoInnovationDesignSystem_cdc9ce.Button" variant="secondary" size="lg" hint-size="180px,56px">See pricing</x-import>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer style="background:var(--ink-900);color:var(--paper);position:relative;overflow:hidden">
+    <img src="../../assets/motif-ripple.svg" alt="" style="position:absolute;left:-80px;bottom:-80px;width:300px;opacity:0.12;filter:invert(1)" />
+    <div style="position:relative;width:100%;max-width:1180px;margin:0 auto;padding:clamp(48px,7vw,80px) clamp(20px,5vw,56px) 32px">
+      <div style="display:flex;flex-wrap:wrap;gap:40px;justify-content:space-between">
+        <div style="max-width:320px">
+          <x-import component-from-global-scope="SalvoInnovationDesignSystem_cdc9ce.SalvoLogo" tone="paper" size="32" hint-size="150px,36px"></x-import>
+          <p style="margin-top:18px;color:var(--text-on-dark-muted);font-size:15.5px;line-height:1.6">Product consulting and workshop facilitation. We bring the fire — you bring the product worth saving.</p>
+        </div>
+        <div style="display:flex;gap:56px;flex-wrap:wrap">
+          <div>
+            <div style="font-family:var(--font-mono);font-size:11px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--volt-500);margin-bottom:14px">Company</div>
+            <div style="display:flex;flex-direction:column;gap:10px">
+              <a href="#consulting" style="color:var(--paper);font-size:15px;text-decoration:none">Consulting</a>
+              <a href="#facilitation" style="color:var(--paper);font-size:15px;text-decoration:none">Facilitation</a>
+              <a href="#faq" style="color:var(--paper);font-size:15px;text-decoration:none">FAQ</a>
+            </div>
+          </div>
+          <div>
+            <div style="font-family:var(--font-mono);font-size:11px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--volt-500);margin-bottom:14px">Get in touch</div>
+            <div style="display:flex;flex-direction:column;gap:10px">
+              <a href="#" style="color:var(--paper);font-size:15px;text-decoration:none">hello@salvo.studio</a>
+              <a href="#" style="color:var(--paper);font-size:15px;text-decoration:none">Book a salvo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:48px;padding-top:22px;border-top:1px solid var(--border-on-dark);display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;font-family:var(--font-mono);font-size:12px;letter-spacing:0.04em;color:var(--text-on-dark-muted)">
+        <span>© 2026 Salvo Innovation</span>
+        <span>SALVŌ — “I SAVE” · 51.5074° N, 0.1278° W</span>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;$preview&quot;: { &quot;width&quot;: 1180, &quot;height&quot;: 1500 }
+}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      faqItems: [
+        { id: "f1", title: "Do you work with startups or only big companies?", content: "Both. We've run sprints for three-person startups and alignment days for 200-person product orgs. The format flexes; the energy doesn't." },
+        { id: "f2", title: "Remote, in person, or hybrid?", content: "All three. Our remote sessions are designed for remote — not an in-person workshop bolted onto a video call." },
+        { id: "f3", title: "How quickly can you start?", content: "Most engagements kick off within two weeks. A single workshop can often be booked sooner." },
+        { id: "f4", title: "What do we actually walk away with?", content: "A decision, the artefacts behind it, and a clear next step. Usually a tested prototype or a one-page plan — never an 80-slide readout." },
+      ],
+      faqOpen: ["f1"],
+    };
+  }
+}
+</script>
+</body>
+</html>

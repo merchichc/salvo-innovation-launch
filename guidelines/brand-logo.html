@@ -1,0 +1,20 @@
+<!-- @dsCard group="Brand" viewport="700x190" name="Logo & mark" subtitle="Lockup on light & ink. Mark = burst. Wordmark = Space Grotesk." -->
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8" />
+<link rel="stylesheet" href="../styles.css" />
+<style>
+  body { margin:0; background:var(--paper); font-family:var(--font-display); }
+  .grid { display:grid; grid-template-columns:1fr 1fr; height:100%; }
+  .panel { display:flex; align-items:center; gap:16px; padding:34px; }
+  .dark { background:var(--ink-900); }
+  .light { background:var(--white); border-right:2px solid var(--ink-900); }
+  .word { font-weight:700; font-size:52px; letter-spacing:-0.04em; line-height:1; }
+  .ink { color:var(--ink-900); } .paper { color:var(--paper); }
+  img { width:64px; height:64px; }
+</style></head>
+<body>
+<div class="grid">
+  <div class="panel light"><img src="../assets/mark-burst-signal.svg" alt="" /><span class="word ink">SALVO</span></div>
+  <div class="panel dark"><img src="../assets/mark-burst-volt.svg" alt="" /><span class="word paper">SALVO</span></div>
+</div>
+</body></html>

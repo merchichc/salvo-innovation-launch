@@ -1,0 +1,37 @@
+<!-- @dsCard group="Brand" viewport="700x260" name="Voice — say / don't" subtitle="Punchy, second-person, witty with restraint. No emoji." -->
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8" />
+<link rel="stylesheet" href="../styles.css" />
+<style>
+  body { margin:0; padding:20px 24px; background:var(--paper); font-family:var(--font-body); color:var(--ink-900); }
+  .cols { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+  h4 { font-family:var(--font-mono); font-size:11px; letter-spacing:0.14em; text-transform:uppercase; margin:0 0 10px; }
+  .say h4 { color:var(--success-500); } .dont h4 { color:var(--danger-500); }
+  ul { margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:9px; }
+  li { font-size:15px; line-height:1.35; padding-left:20px; position:relative; }
+  .say li::before { content:"→"; position:absolute; left:0; color:var(--signal-500); font-weight:700; }
+  .dont li::before { content:"✕"; position:absolute; left:0; color:var(--danger-500); font-weight:700; }
+  .dont li { color:var(--text-muted); text-decoration:line-through; text-decoration-color:var(--sand-300); }
+</style></head>
+<body>
+<div class="cols">
+  <div class="say">
+    <h4>Say</h4>
+    <ul>
+      <li>Your product is stuck. We bring the fire.</li>
+      <li>Months of debate, settled in a week.</li>
+      <li>You leave with a decision, not a deck.</li>
+      <li>Book a salvo.</li>
+    </ul>
+  </div>
+  <div class="dont">
+    <h4>Don't</h4>
+    <ul>
+      <li>We offer best-in-class ideation engagements.</li>
+      <li>Leverage synergies across your value streams.</li>
+      <li>World-class facilitation solutions! 🚀</li>
+      <li>Schedule a discovery consultation.</li>
+    </ul>
+  </div>
+</div>
+</body></html>

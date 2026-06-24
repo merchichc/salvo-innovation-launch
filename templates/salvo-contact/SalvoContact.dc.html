@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Salvo Contact Page" description="Contact page template — pitch, contact details and a working-looking form built from Salvo form components, plus footer." -->
+<helmet>
+<script src="./ds-base.js"></script>
+</helmet>
+
+<div style="font-family:var(--font-body);color:var(--text-primary);background:var(--paper)">
+
+  <!-- ===== NAV ===== -->
+  <header style="position:sticky;top:0;z-index:50;background:rgba(246,241,231,0.82);backdrop-filter:blur(12px);border-bottom:2px solid var(--ink-900)">
+    <div style="width:100%;max-width:1180px;margin:0 auto;padding:0 clamp(20px,5vw,56px);display:flex;align-items:center;justify-content:space-between;height:72px">
+      <x-import component-from-global-scope="SalvoInnovationDesignSystem_cdc9ce.SalvoLogo" tone="ink" size="30" hint-size="150px,34px"></x-import>
+      <nav style="display:flex;align-items:center;gap:4px">
+        <a href="#" style="font-family:var(--font-body);font-weight:700;font-size:15px;color:var(--ink-900);padding:8px 12px;text-decoration:none">Services</a>
+        <a href="#" style="font-family:var(--font-body);font-weight:700;font-size:15px;color:var(--ink-900);padding:8px 12px;text-decoration:none">Pricing</a>
+        <a href="#" style="font-family:var(--font-body);font-weight:700;font-size:15px;color:var(--ink-900);padding:8px 12px;text-decoration:none">About</a>
+      </nav>
+      <x-import component-from-global-scope="SalvoInnovationDesignSystem_cdc9ce.Button" variant="primary" size="sm" hint-size="130px,40px">Book a salvo</x-import>
+    </div>
+  </header>
+
+  <!-- ===== CONTACT ===== -->
+  <section style="padding:clamp(48px,7vw,88px) 0 clamp(56px,8vw,104px);background:var(--paper)">
+    <div style="width:100%;max-width:1180px;margin:0 auto;padding:0 clamp(20px,5vw,56px)">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:44px">
+
+        <!-- Left: pitch + details -->
+        <div>
+          <span style="display:inline-flex;align-items:center;gap:10px;font-family:var(--font-mono);font-size:12px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--signal-600)"><span style="width:26px;height:0;border-top:2px solid currentColor"></span>Book a salvo</span>
+          <h1 style="font-family:var(--font-display);font-weight:700;font-size:clamp(2.4rem,5vw,4rem);line-height:0.99;letter-spacing:-0.035em;margin:18px 0 0">Tell us what's stuck.</h1>
+          <p style="margin-top:20px;font-size:19px;line-height:1.55;color:var(--text-secondary);max-width:44ch">A sentence or two is plenty to start. We'll reply with the fastest way through — and whether a workshop or a longer engagement fits.</p>
+
+          <div style="margin-top:36px;display:flex;flex-direction:column;gap:18px">
+            <div style="display:flex;gap:14px;align-items:center">
+              <div style="width:46px;height:46px;border-radius:12px;background:var(--white);border:2px solid var(--ink-900);box-shadow:var(--shadow-hard);display:flex;align-items:center;justify-content:center;flex:none">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--signal-500)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+              </div>
+              <div>
+                <div style="font-family:var(--font-mono);font-size:10.5px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-muted)">Email</div>
+                <div style="font-weight:700;font-size:16.5px;color:var(--ink-900)">hello@salvo.studio</div>
+              </div>
+            </div>
+            <div style="display:flex;gap:14px;align-items:center">
+              <div style="width:46px;height:46px;border-radius:12px;background:var(--white);border:2px solid var(--ink-900);box-shadow:var(--shadow-hard);display:flex;align-items:center;justify-content:center;flex:none">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--signal-500)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg>
+              </div>
+              <div>
+                <div style="font-family:var(--font-mono);font-size:10.5px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-muted)">Response time</div>
+                <div style="font-weight:700;font-size:16.5px;color:var(--ink-900)">Within 1 working day</div>
+              </div>
+            </div>
+            <div style="display:flex;gap:14px;align-items:center">
+              <div style="width:46px;height:46px;border-radius:12px;background:var(--white);border:2px solid var(--ink-900);box-shadow:var(--shadow-hard);display:flex;align-items:center;justify-content:center;flex:none">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--signal-500)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              </div>
+              <div>
+                <div style="font-family:var(--font-mono);font-size:10.5px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-muted)">Based in</div>
+                <div style="font-weight:700;font-size:16.5px;color:var(--ink-900)">London · working worldwide</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: form (sticker card) -->
+        <div style="background:var(--white);border:2px solid var(--ink-900);border-radius:18px;box-shadow:4px 4px 0 var(--ink-900);padding:clamp(24px,4vw,36px)">
+          <form style="display:flex;flex-direction:column;gap:18px">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+              <x-import component-from-global-scope="SalvoInnovationDesignSystem_cdc9ce.Input" id="c-name" label="Your name" placeholder="Jane Marlow" hint-size="100%,72px"></x-import>
+              <x-import component-from-global-scope="SalvoInnovationDesignSystem_cdc9ce.Input" id="c-email" label="Work email" type="email" placeholder="jane@acme.com" hint-size="100%,72px"></x-import>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+              <x-import component-from-global-scope="SalvoInnovationDesignSystem_cdc9ce.Select" id="c-team" label="Team size" hint-size="100%,72px"><option>Just me</option><option>2–10</option><option>11–50</option><option>50+</option></x-import>
+              <x-import component-from-global-scope="SalvoInnovationDesignSystem_cdc9ce.Select" id="c-int" label="Interested in" hint-size="100%,72px"><option>A workshop</option><option>Product consulting</option><option>Ongoing (Fleet)</option><option>Not sure yet</option></x-import>
+            </div>
+            <x-import component-from-global-scope="SalvoInnovationDesignSystem_cdc9ce.Textarea" id="c-msg" label="What's stuck?" rows="4" placeholder="We can't agree on what to build next…" hint-size="100%,130px"></x-import>
+            <x-import component-from-global-scope="SalvoInnovationDesignSystem_cdc9ce.Button" variant="primary" size="lg" full-width="true" hint-size="100%,56px">Send it</x-import>
+            <p style="font-family:var(--font-mono);font-size:11.5px;color:var(--text-muted);text-align:center;margin:0">No spam. No 80-slide readouts. Just a fast, human reply.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer style="background:var(--ink-900);color:var(--paper);position:relative;overflow:hidden">
+    <img src="../../assets/motif-ripple.svg" alt="" style="position:absolute;left:-80px;bottom:-80px;width:300px;opacity:0.12;filter:invert(1)" />
+    <div style="position:relative;width:100%;max-width:1180px;margin:0 auto;padding:clamp(48px,7vw,80px) clamp(20px,5vw,56px) 32px">
+      <div style="display:flex;flex-wrap:wrap;gap:40px;justify-content:space-between">
+        <div style="max-width:320px">
+          <x-import component-from-global-scope="SalvoInnovationDesignSystem_cdc9ce.SalvoLogo" tone="paper" size="32" hint-size="150px,36px"></x-import>
+          <p style="margin-top:18px;color:var(--text-on-dark-muted);font-size:15.5px;line-height:1.6">Product consulting and workshop facilitation. We bring the fire — you bring the product worth saving.</p>
+        </div>
+        <div style="display:flex;gap:56px;flex-wrap:wrap">
+          <div>
+            <div style="font-family:var(--font-mono);font-size:11px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--volt-500);margin-bottom:14px">Company</div>
+            <div style="display:flex;flex-direction:column;gap:10px">
+              <a href="#" style="color:var(--paper);font-size:15px;text-decoration:none">Services</a>
+              <a href="#" style="color:var(--paper);font-size:15px;text-decoration:none">Pricing</a>
+              <a href="#" style="color:var(--paper);font-size:15px;text-decoration:none">About</a>
+            </div>
+          </div>
+          <div>
+            <div style="font-family:var(--font-mono);font-size:11px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--volt-500);margin-bottom:14px">Get in touch</div>
+            <div style="display:flex;flex-direction:column;gap:10px">
+              <a href="#" style="color:var(--paper);font-size:15px;text-decoration:none">hello@salvo.studio</a>
+              <a href="#" style="color:var(--paper);font-size:15px;text-decoration:none">Book a salvo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:48px;padding-top:22px;border-top:1px solid var(--border-on-dark);display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;font-family:var(--font-mono);font-size:12px;letter-spacing:0.04em;color:var(--text-on-dark-muted)">
+        <span>© 2026 Salvo Innovation</span>
+        <span>SALVŌ — “I SAVE” · 51.5074° N, 0.1278° W</span>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;$preview&quot;: { &quot;width&quot;: 1180, &quot;height&quot;: 980 }
+}"></script>
+</body>
+</html>
