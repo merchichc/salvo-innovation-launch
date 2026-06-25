@@ -10,10 +10,13 @@ export const Route = createFileRoute("/workshops")({
       { name: "description", content: "The techniques behind the magic. Workshop exercises we run to turn debate into decisions, fast." },
       { property: "og:title", content: "Workshops — Salvo Innovation" },
       { property: "og:description", content: "Workshop techniques we use to turn debate into decisions, fast." },
+      { property: "og:url", content: "https://salvoinnovation.com/workshops" },
     ],
+    links: [{ rel: "canonical", href: "https://salvoinnovation.com/workshops" }],
   }),
   component: WorkshopsPage,
 });
+
 
 const TECHNIQUES = [
   { cat: "diverge", name: "Crazy 8s", dur: "8 min", group: "Any size", desc: "Eight ideas, eight minutes, one folded sheet. Quantity beats precious. Breaks the blank page every time.", Icon: Zap },
@@ -52,6 +55,7 @@ function WorkshopsPage() {
 
       <section style={{ padding: "clamp(48px,7vw,88px) 0" }}>
         <Container>
+          <h2 style={{ fontFamily: "var(--font-display)", fontWeight: 700, fontSize: "clamp(1.8rem,3.6vw,2.4rem)", letterSpacing: "-0.02em", textAlign: "center", margin: "0 0 28px", color: "var(--ink-900)" }}>Our techniques</h2>
           <div style={{ display: "flex", justifyContent: "center", marginBottom: 40, flexWrap: "wrap", gap: 8 }}>
             {CATS.map((c) => (
               <button key={c.id} onClick={() => setCat(c.id)} style={{ padding: "10px 18px", borderRadius: 999, border: "2px solid var(--ink-900)", background: cat === c.id ? "var(--ink-900)" : "var(--white)", color: cat === c.id ? "var(--paper)" : "var(--ink-900)", fontFamily: "var(--font-body)", fontWeight: 700, fontSize: 14, cursor: "pointer", boxShadow: cat === c.id ? "var(--shadow-hard-signal)" : "none" }}>
@@ -60,6 +64,7 @@ function WorkshopsPage() {
             ))}
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: 20 }}>
+
             {shown.map((t) => (
               <div key={t.name} className="salvo-card salvo-card--interactive" style={{ padding: 26, display: "flex", flexDirection: "column" }}>
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 18 }}>

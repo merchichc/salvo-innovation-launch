@@ -77,13 +77,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Salvo Innovation — Product consulting & workshop facilitation" },
+      { title: "Salvo Innovation — Product consulting & workshops" },
       { name: "description", content: "Sharp, decisive workshops and product consulting. We turn months of debate into a week of progress." },
-      { property: "og:title", content: "Salvo Innovation — Product consulting & workshop facilitation" },
+      { property: "og:title", content: "Salvo Innovation — Product consulting & workshops" },
       { property: "og:description", content: "Sharp, decisive workshops and product consulting. We turn months of debate into a week of progress." },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "Salvo Innovation" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Salvo Innovation — Product consulting & workshop facilitation" },
+      { name: "twitter:title", content: "Salvo Innovation — Product consulting & workshops" },
       { name: "twitter:description", content: "Sharp, decisive workshops and product consulting. We turn months of debate into a week of progress." },
       { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/2keNNlTDoUdP2oLKmvoR2nesM4c2/social-images/social-1782396852442-salvo-og-image.webp" },
       { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/2keNNlTDoUdP2oLKmvoR2nesM4c2/social-images/social-1782396852442-salvo-og-image.webp" },
@@ -98,7 +99,30 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { rel: "icon", href: "/brand/mark-burst-signal.svg", type: "image/svg+xml" },
     ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "Salvo Innovation",
+          url: "https://salvoinnovation.com",
+          logo: "https://salvoinnovation.com/brand/mark-burst-signal.svg",
+          description: "Product consulting and workshop facilitation. Sharp, decisive workshops that turn months of debate into a week of progress.",
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          name: "Salvo Innovation",
+          url: "https://salvoinnovation.com",
+        }),
+      },
+    ],
   }),
+
   shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,

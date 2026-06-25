@@ -5,12 +5,13 @@ import { Container, Eyebrow, SectionHead, SiteLayout, CTABand } from "../compone
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Salvo Innovation — Your product is stuck. We bring the fire." },
+      { title: "Salvo Innovation — Your product is stuck. We bring fire." },
       { name: "description", content: "Sharp, decisive workshops and product consulting that turn months of debate into a week of progress." },
-      { property: "og:title", content: "Salvo Innovation — Your product is stuck. We bring the fire." },
+      { property: "og:title", content: "Salvo Innovation — Your product is stuck. We bring fire." },
       { property: "og:description", content: "Sharp, decisive workshops and product consulting that turn months of debate into a week of progress." },
-      { property: "og:image", content: "/brand/mark-burst-signal.svg" },
+      { property: "og:url", content: "https://salvoinnovation.com/" },
     ],
+    links: [{ rel: "canonical", href: "https://salvoinnovation.com/" }],
   }),
   component: Home,
 });

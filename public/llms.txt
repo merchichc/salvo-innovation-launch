@@ -1,0 +1,14 @@
+# Salvo Innovation
+
+> Product consulting and workshop facilitation. We run sharp, decisive workshops and embedded consulting engagements that turn months of debate into a week of progress.
+
+Salvo Innovation helps product teams get unstuck. We design and facilitate product sprints, strategy days and alignment workshops, and we offer fractional product leadership for teams that need steady guidance over months.
+
+## Pages
+
+- [Home](/): What Salvo does and how we work.
+- [Services](/services): Digital product consulting and workshop design & facilitation.
+- [Workshops](/workshops): The exercises and techniques we run in the room.
+- [Pricing](/pricing): Spark workshops, Salvo sprints, and Fleet ongoing engagements.
+- [About](/about): Who we are and the studio behind Salvo.
+- [Contact](/contact): Book a workshop or start a conversation.

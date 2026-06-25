@@ -10,10 +10,27 @@ export const Route = createFileRoute("/pricing")({
       { name: "description", content: "Clear prices, no surprises. Spark workshops, Salvo sprints, and Fleet ongoing engagements." },
       { property: "og:title", content: "Pricing — Salvo Innovation" },
       { property: "og:description", content: "Spark workshops, Salvo sprints, and Fleet ongoing engagements." },
+      { property: "og:url", content: "https://salvoinnovation.com/pricing" },
+    ],
+    links: [{ rel: "canonical", href: "https://salvoinnovation.com/pricing" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: FAQS.map((f) => ({
+            "@type": "Question",
+            name: f.q,
+            acceptedAnswer: { "@type": "Answer", text: f.a },
+          })),
+        }),
+      },
     ],
   }),
   component: PricingPage,
 });
+
 
 const TIERS = [
   { name: "Spark", price: "$5k", unit: "/ session", tag: "Single workshop", desc: "One sharp, facilitated session to break a specific logjam.", features: ["Half- or full-day workshop", "Agenda designed around your decision", "Facilitation + digital whiteboard", "Outcomes summary next day"], cta: "Book a Spark", highlight: false },
@@ -48,7 +65,7 @@ function PricingPage() {
                   <span style={{ position: "absolute", top: -14, right: 22, background: "var(--signal-500)", color: "#fff", border: "2px solid var(--ink-900)", borderRadius: 999, padding: "5px 12px", fontFamily: "var(--font-mono)", fontSize: 10.5, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase" }}>Most popular</span>
                 )}
                 <div style={{ fontFamily: "var(--font-mono)", fontSize: 11, fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase", color: t.highlight ? "var(--volt-500)" : "var(--signal-600)" }}>{t.tag}</div>
-                <h3 style={{ fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 30, margin: "10px 0 4px", letterSpacing: "-0.02em", color: t.highlight ? "var(--paper)" : "var(--ink-900)" }}>{t.name}</h3>
+                <h2 style={{ fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 30, margin: "10px 0 4px", letterSpacing: "-0.02em", color: t.highlight ? "var(--paper)" : "var(--ink-900)" }}>{t.name}</h2>
                 <div style={{ display: "flex", alignItems: "baseline", gap: 6, margin: "8px 0 4px" }}>
                   <span style={{ fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 44, letterSpacing: "-0.03em", color: t.highlight ? "var(--volt-500)" : "var(--signal-500)" }}>{t.price}</span>
                   <span style={{ fontFamily: "var(--font-mono)", fontSize: 13, color: t.highlight ? "var(--text-on-dark-muted)" : "var(--text-muted)" }}>{t.unit}</span>
