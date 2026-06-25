@@ -10,10 +10,27 @@ export const Route = createFileRoute("/pricing")({
       { name: "description", content: "Clear prices, no surprises. Spark workshops, Salvo sprints, and Fleet ongoing engagements." },
       { property: "og:title", content: "Pricing — Salvo Innovation" },
       { property: "og:description", content: "Spark workshops, Salvo sprints, and Fleet ongoing engagements." },
+      { property: "og:url", content: "https://salvoinnovation.com/pricing" },
+    ],
+    links: [{ rel: "canonical", href: "https://salvoinnovation.com/pricing" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: FAQS.map((f) => ({
+            "@type": "Question",
+            name: f.q,
+            acceptedAnswer: { "@type": "Answer", text: f.a },
+          })),
+        }),
+      },
     ],
   }),
   component: PricingPage,
 });
+
 
 const TIERS = [
   { name: "Spark", price: "$5k", unit: "/ session", tag: "Single workshop", desc: "One sharp, facilitated session to break a specific logjam.", features: ["Half- or full-day workshop", "Agenda designed around your decision", "Facilitation + digital whiteboard", "Outcomes summary next day"], cta: "Book a Spark", highlight: false },

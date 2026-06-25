@@ -10,10 +10,27 @@ export const Route = createFileRoute("/services")({
       { name: "description", content: "Product consulting and workshop facilitation. Two service lines that get your product moving and keep it moving." },
       { property: "og:title", content: "Services — Salvo Innovation" },
       { property: "og:description", content: "Product consulting and workshop facilitation. Two service lines that get your product moving." },
+      { property: "og:url", content: "https://salvoinnovation.com/services" },
+    ],
+    links: [{ rel: "canonical", href: "https://salvoinnovation.com/services" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: FAQS.map((f) => ({
+            "@type": "Question",
+            name: f.q,
+            acceptedAnswer: { "@type": "Answer", text: f.a },
+          })),
+        }),
+      },
     ],
   }),
   component: ServicesPage,
 });
+
 
 type Line = { tag: string; title: string; lead: string; body: string; items: string[]; dark: boolean };
 
