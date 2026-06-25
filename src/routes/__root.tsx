@@ -88,6 +88,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:description", content: "Sharp, decisive workshops and product consulting. We turn months of debate into a week of progress." },
       { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/2keNNlTDoUdP2oLKmvoR2nesM4c2/social-images/social-1782396852442-salvo-og-image.webp" },
       { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/2keNNlTDoUdP2oLKmvoR2nesM4c2/social-images/social-1782396852442-salvo-og-image.webp" },
+      { name: "google-site-verification", content: "cWGg3djAnTHonoyHA6_onDymGznCsLrk7gKwHIpip9U" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
