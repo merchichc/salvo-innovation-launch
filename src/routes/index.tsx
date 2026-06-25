@@ -35,8 +35,8 @@ function HeroHome() {
           </div>
         </div>
       </Container>
-      <div style={{ background: "var(--white)", padding: "clamp(20px, 4vw, 40px) clamp(20px,5vw,56px)" }}>
-        <div style={{ height: 8, background: "var(--signal-500)", width: "100%" }} />
+      <div style={{ background: "var(--white)", padding: "clamp(28px, 4vw, 48px) clamp(20px,5vw,56px)", display: "flex", justifyContent: "center", alignItems: "center" }}>
+        <img src="/brand/motif-ripple.svg" alt="" style={{ width: 56, height: 56, opacity: 0.25 }} />
       </div>
     </section>
   );
