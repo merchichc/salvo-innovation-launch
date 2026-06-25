@@ -35,15 +35,8 @@ function HeroHome() {
           </div>
         </div>
       </Container>
-      <div style={{ borderTop: "2px solid var(--ink-900)", background: "var(--white)" }}>
-        <Container style={{ padding: "20px clamp(20px,5vw,56px)" }}>
-          <div style={{ display: "flex", alignItems: "center", gap: 28, flexWrap: "wrap", justifyContent: "space-between" }}>
-            <span style={{ fontFamily: "var(--font-mono)", fontSize: 11, fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase", color: "var(--text-muted)" }}>Trusted by teams at</span>
-            <div style={{ display: "flex", gap: "clamp(20px,4vw,52px)", flexWrap: "wrap", fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 20, color: "var(--ink-800)", opacity: 0.75 }}>
-              <span>Northwind</span><span>Vela</span><span>Harbor&amp;Co</span><span>Kestrel</span><span>Loomis</span>
-            </div>
-          </div>
-        </Container>
+      <div style={{ borderTop: "2px solid var(--ink-900)", background: "var(--white)", display: "flex", alignItems: "center", justifyContent: "center", padding: "28px clamp(20px,5vw,56px)" }}>
+        <img src="/brand/motif-ripple.svg" alt="" style={{ width: 56, height: 56, opacity: 0.25, color: "var(--ink-900)" }} />
       </div>
     </section>
   );
