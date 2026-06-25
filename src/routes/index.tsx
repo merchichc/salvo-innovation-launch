@@ -108,7 +108,7 @@ function Method() {
 }
 
 function StatsBand() {
-  const stats: Array<[string, string]> = [["5 Days", "Idea → tested prototype"], ["120+", "Workshops facilitated"], ["40+", "Teams unstuck"], ["9/10", "Would run another"]];
+  const stats: Array<[string, string]> = [["5 Days", "Idea → tested prototype"], ["500+", "Workshops facilitated"], ["40+", "Teams unstuck"], ["9/10", "Would run another"]];
   return (
     <section style={{ background: "var(--ink-900)", color: "var(--paper)", position: "relative", overflow: "hidden" }}>
       <img src="/brand/motif-ripple.svg" alt="" style={{ position: "absolute", right: -60, top: -60, width: 320, opacity: 0.14, filter: "invert(1)" }} />
