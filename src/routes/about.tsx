@@ -24,7 +24,7 @@ const VALUES = [
 function AboutPage() {
   return (
     <SiteLayout>
-      <section style={{ background: "var(--paper)", position: "relative", overflow: "hidden", borderBottom: "2px solid var(--ink-900)" }}>
+      <section style={{ background: "var(--paper)", position: "relative", borderBottom: "2px solid var(--ink-900)" }}>
         <img src="/brand/motif-burst-rays.svg" alt="" style={{ position: "absolute", left: -50, bottom: -70, width: 380, opacity: 0.8 }} />
         <Container style={{ padding: "clamp(56px,8vw,104px) clamp(20px,5vw,56px)", position: "relative" }}>
           <div style={{ maxWidth: 820 }}>
