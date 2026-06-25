@@ -35,9 +35,7 @@ function HeroHome() {
           </div>
         </div>
       </Container>
-      <div style={{ background: "var(--white)", padding: "clamp(28px, 4vw, 48px) clamp(20px,5vw,56px)", display: "flex", justifyContent: "center", alignItems: "center" }}>
-        <img src="/brand/motif-ripple.svg" alt="" style={{ width: 56, height: 56, opacity: 0.25 }} />
-      </div>
+      <div style={{ height: "clamp(48px, 7vw, 90px)", background: "linear-gradient(to bottom, var(--paper), var(--white))" }} />
     </section>
   );
 }
