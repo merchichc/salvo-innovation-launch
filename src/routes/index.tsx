@@ -35,9 +35,7 @@ function HeroHome() {
           </div>
         </div>
       </Container>
-      <div style={{ background: "var(--white)", padding: "clamp(28px, 4vw, 48px) clamp(20px,5vw,56px)", display: "flex", justifyContent: "center", alignItems: "center" }}>
-        <img src="/brand/motif-ripple.svg" alt="" style={{ width: 56, height: 56, opacity: 0.25 }} />
-      </div>
+      <div style={{ height: "clamp(48px, 7vw, 90px)", background: "linear-gradient(to bottom, var(--paper), var(--white))" }} />
     </section>
   );
 }
@@ -48,7 +46,7 @@ function WhatWeDo() {
     { Icon: Zap, tag: "Facilitation", to: "/workshops", title: "Workshop design & facilitation", body: "High-energy, decision-forward workshops for leadership and product teams. We design the session, run the room, and hand you outcomes — not homework.", points: ["Product sprints + a tested prototype", "Strategy & alignment days", "Remote, in-person or hybrid"], dark: true },
   ];
   return (
-    <section style={{ padding: "clamp(64px,9vw,112px) 0" }}>
+    <section style={{ padding: "clamp(64px,9vw,112px) 0", background: "var(--white)" }}>
       <Container>
         <SectionHead eyebrow="What we do" title="Two ways we light a fire" intro="Whether you need a steady hand over months or a decisive burst in a week — we meet your product where it's stuck." />
         <div style={{ marginTop: 48, display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: 22 }}>
