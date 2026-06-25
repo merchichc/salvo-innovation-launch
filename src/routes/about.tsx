@@ -83,7 +83,7 @@ function AboutPage() {
       <section style={{ padding: "clamp(48px,7vw,80px) 0" }}>
         <Container>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(160px,1fr))", gap: 28 }}>
-            {[["2020", "Studio founded"], ["120+", "Workshops run"], ["50+", "PRODUCTS LAUNCHED"], ["∞", "Sticky notes"]].map(([v, l]) => (
+            {[["2020", "Studio founded"], ["500+", "Workshops run"], ["50+", "PRODUCTS LAUNCHED"], ["∞", "Sticky notes"]].map(([v, l]) => (
               <div key={l}>
                 <div style={{ fontFamily: "var(--font-display)", fontWeight: 700, fontSize: "clamp(2.4rem,5vw,3.4rem)", letterSpacing: "-0.03em", lineHeight: 1, color: "var(--signal-500)" }}>{v}</div>
                 <div style={{ marginTop: 8, fontFamily: "var(--font-mono)", fontSize: 12, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: "var(--text-muted)" }}>{l}</div>
