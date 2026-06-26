@@ -36,6 +36,31 @@ export const submitContactInquiry = createServerFn({ method: "POST" })
       status: "pending",
     });
 
+    // Get or create a persistent unsubscribe token for the fixed recipient.
+    const normalized = entry.to.toLowerCase();
+    let unsubscribeToken: string | undefined;
+    const { data: existing } = await supabaseAdmin
+      .from("email_unsubscribe_tokens")
+      .select("token, used_at")
+      .eq("email", normalized)
+      .maybeSingle();
+    if (existing && !existing.used_at) {
+      unsubscribeToken = existing.token;
+    } else {
+      const bytes = new Uint8Array(32);
+      crypto.getRandomValues(bytes);
+      const tok = Array.from(bytes).map((b) => b.toString(16).padStart(2, "0")).join("");
+      await supabaseAdmin
+        .from("email_unsubscribe_tokens")
+        .upsert({ token: tok, email: normalized }, { onConflict: "email", ignoreDuplicates: true });
+      const { data: stored } = await supabaseAdmin
+        .from("email_unsubscribe_tokens")
+        .select("token")
+        .eq("email", normalized)
+        .maybeSingle();
+      unsubscribeToken = stored?.token ?? tok;
+    }
+
     const { error } = await supabaseAdmin.rpc("enqueue_email", {
       queue_name: "transactional_emails",
       payload: {
@@ -50,6 +75,7 @@ export const submitContactInquiry = createServerFn({ method: "POST" })
         purpose: "transactional",
         label: "contact-inquiry",
         idempotency_key: messageId,
+        unsubscribe_token: unsubscribeToken,
         queued_at: new Date().toISOString(),
       },
     });
