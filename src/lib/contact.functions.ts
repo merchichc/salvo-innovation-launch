@@ -38,28 +38,25 @@ export const submitContactInquiry = createServerFn({ method: "POST" })
 
     // Get or create a persistent unsubscribe token for the fixed recipient.
     const normalized = entry.to.toLowerCase();
-    let unsubscribeToken: string | undefined;
-    const { data: existing } = await supabaseAdmin
+    let unsubscribeToken: string;
+    const { data: existing, error: lookupErr } = await supabaseAdmin
       .from("email_unsubscribe_tokens")
       .select("token, used_at")
       .eq("email", normalized)
       .maybeSingle();
+    if (lookupErr) console.error("[contact] token lookup error", lookupErr);
     if (existing && !existing.used_at) {
       unsubscribeToken = existing.token;
     } else {
       const bytes = new Uint8Array(32);
       crypto.getRandomValues(bytes);
-      const tok = Array.from(bytes).map((b) => b.toString(16).padStart(2, "0")).join("");
-      await supabaseAdmin
+      unsubscribeToken = Array.from(bytes).map((b) => b.toString(16).padStart(2, "0")).join("");
+      const { error: upsertErr } = await supabaseAdmin
         .from("email_unsubscribe_tokens")
-        .upsert({ token: tok, email: normalized }, { onConflict: "email", ignoreDuplicates: true });
-      const { data: stored } = await supabaseAdmin
-        .from("email_unsubscribe_tokens")
-        .select("token")
-        .eq("email", normalized)
-        .maybeSingle();
-      unsubscribeToken = stored?.token ?? tok;
+        .upsert({ token: unsubscribeToken, email: normalized }, { onConflict: "email" });
+      if (upsertErr) console.error("[contact] token upsert error", upsertErr);
     }
+    console.log("[contact] token ready len=", unsubscribeToken?.length);
 
     const { error } = await supabaseAdmin.rpc("enqueue_email", {
       queue_name: "transactional_emails",
