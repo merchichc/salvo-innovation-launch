@@ -13,7 +13,7 @@ export const submitContactInquiry = createServerFn({ method: "POST" })
   .inputValidator((input: unknown) => ContactInput.parse(input))
   .handler(async ({ data }) => {
     const React = await import("react");
-    const { render } = await import("react-email");
+    const { render } = await import("@react-email/render");
     const { TEMPLATES } = await import("./email-templates/registry");
     const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
 
