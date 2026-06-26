@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState, type FormEvent } from "react";
 import { ArrowRight, Check, Mail, MessageCircle, MapPin } from "lucide-react";
 import { Container, Eyebrow, SiteLayout } from "../components/site/SiteChrome";
+import { submitContactInquiry } from "@/lib/contact.functions";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -17,12 +18,35 @@ export const Route = createFileRoute("/contact")({
 
 function ContactPage() {
   const [sent, setSent] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const details = [
     { Icon: Mail, label: "Email", value: "hello@salvoinnovation.com" },
     { Icon: MessageCircle, label: "Response time", value: "Within 1 working day" },
     { Icon: MapPin, label: "Based in", value: "Working worldwide" },
   ];
-  const onSubmit = (e: FormEvent) => { e.preventDefault(); setSent(true); };
+  const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setError(null);
+    setSubmitting(true);
+    const fd = new FormData(e.currentTarget);
+    try {
+      await submitContactInquiry({
+        data: {
+          name: String(fd.get("name") || ""),
+          email: String(fd.get("email") || ""),
+          team: String(fd.get("team") || ""),
+          interest: String(fd.get("interest") || ""),
+          message: String(fd.get("message") || ""),
+        },
+      });
+      setSent(true);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Something went wrong. Please try again.");
+    } finally {
+      setSubmitting(false);
+    }
+  };
   return (
     <SiteLayout>
       <section style={{ padding: "clamp(48px,7vw,88px) 0 clamp(56px,8vw,104px)", background: "var(--paper)" }}>
@@ -78,7 +102,10 @@ function ContactPage() {
                     </Field>
                   </div>
                   <Field label="What's stuck?"><textarea className="salvo-textarea" name="message" rows={4} placeholder="We can't agree on what to build next…" required /></Field>
-                  <button type="submit" className="salvo-btn salvo-btn--primary salvo-btn--lg salvo-btn--full">Send it <ArrowRight size={18} /></button>
+                  <button type="submit" disabled={submitting} className="salvo-btn salvo-btn--primary salvo-btn--lg salvo-btn--full">
+                    {submitting ? "Sending…" : <>Send it <ArrowRight size={18} /></>}
+                  </button>
+                  {error && <p style={{ color: "var(--signal-500)", fontSize: 13, textAlign: "center", margin: 0 }}>{error}</p>}
                   <p style={{ fontFamily: "var(--font-mono)", fontSize: 11.5, color: "var(--text-muted)", textAlign: "center", margin: 0 }}>No spam. No 80-slide readouts. Just a fast, human reply.</p>
                 </form>
               )}
